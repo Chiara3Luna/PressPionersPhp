@@ -43,5 +43,10 @@ Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 //Rotta che gestisce submit
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
+//Gruppo di rotte protetto da questo middleware
+Route::middleware('admin')->group(function(){
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
+
 
 
