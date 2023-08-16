@@ -45,4 +45,8 @@
             </ul>
         </li>
     @endguest
+
+    @if(Auth::user()->is_admin)
+    <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+    @endif
 </x-layout>
