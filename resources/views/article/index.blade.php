@@ -22,7 +22,12 @@
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
                         Redatto il  {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}
                         <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+                        
 
+
+                        {{-- Adesso però dobbiamo dare la possibilità agli utenti di raggiungere questa vista quindi aggiorniamo le card --}}
+                        <a href="{{route('article.byCategory', ['category' => $article->category->ide])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+                        <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->user->name }}</a>
                     </div>
                     
                 </div>
