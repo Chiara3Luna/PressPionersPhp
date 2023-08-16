@@ -54,5 +54,19 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 });
 
+//Rotta che ci porta al revisore
+Route::middleware('revisor')->group(function(){
+    Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
+    //Rotta che permette al revisore di accettare un articolo
+    Route::get('/revisor/{article}/accept', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
+    //Rotta che permette al revisore di rifiutare un articolo
+    Route::get('/revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
+    //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
+    Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
+
+
+});
+
+
 
 
