@@ -34,8 +34,14 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 //Rotta per filtro per categoria
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
-// rotta per accedere agli articoli filtrati per redattore
+//Rotta per accedere agli articoli filtrati per redattore
 Route::get('/article/by-Authors/{author}', [ArticleController::class, 'articlesByAuthors'])->name('article.byAuthors');
+
+//Rotta che porta a "Lavora con noi"
+Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+
+//Rotta che gestisce submit
+Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
 
 
