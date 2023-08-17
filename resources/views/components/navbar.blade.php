@@ -46,12 +46,12 @@
         </li>
     @endguest
 
-    @if(Auth::user()->is_admin)
+    @if (Auth::check() && Auth::user()->is_admin)
     <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
     @endif
 
 
-    @if(Auth::user()->is_revisor)
+    @if (Auth::check() && Auth::user()->is_revisor)
     <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
     @endif
 </x-layout>
