@@ -1,4 +1,4 @@
-<x-layout>
+<nav id= navbar class="navbar navbar-expand-lg bg-b sticky-top bg-2">
 
     <div class="container-fluid p-5 bg-info text-center text-white">
         <div class="row justify-content-center">
@@ -54,4 +54,4 @@
     @if (Auth::check() && Auth::user()->is_revisor)
     <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard del revisore</a></li>
     @endif
-</x-layout>
+</nav>
