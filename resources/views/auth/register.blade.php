@@ -22,7 +22,7 @@
                     </div>
                 @endif
 
-                <form action="{{ $route('register') }}" class="card p-5 shadow" method="POST">
+                <form action="{{route('register')}}" class="card p-5 shadow" method="POST">
                     @csrf
 
                     <div class="mb-3">
