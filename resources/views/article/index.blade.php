@@ -9,7 +9,7 @@
     
     <div class="container my-5">
         <div class="row justify-content-around">
-            @foreach($articles as article)
+            @foreach($articles as $article)
             <div class="col-12 col-md-3 my-2">
                 <div class="card">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="...">
@@ -26,8 +26,8 @@
 
 
                         {{-- Adesso però dobbiamo dare la possibilità agli utenti di raggiungere questa vista quindi aggiorniamo le card --}}
-                        <a href="{{route('article.byCategory', ['category' => $article->category->ide])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
-                        <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->user->name }}</a>
+                        <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+                        <a href="{{route('article.byAuthors', ['author' => $article->user->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->user->name }}</a>
                     </div>
                     
                 </div>
