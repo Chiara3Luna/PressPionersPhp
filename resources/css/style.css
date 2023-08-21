@@ -5,7 +5,9 @@
 }
 
 * {
-    font-family: 'Lobster', 'Frank Ruhl Libre', 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Lobster';
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* colore background */
@@ -51,7 +53,8 @@ li{
 /* fine navbar */
 
 h1 {
-    font-weight: 600;
+    font-family: 'Yatra One', cursive;
+    font-weight: 500;
     font-size: 7vh;
     letter-spacing: 3px;
 }
@@ -66,6 +69,14 @@ h1::after {
     content: '„';
     font-size: 10vh;
     margin-left: 2vh;
+}
+
+h2{
+    font-family: 'Outfit', cursive;
+}
+
+h3, h4, h5, h6, p{
+    font-family: 'Outfit', sans-serif;
 }
 
 

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-2 text-white sticky-top">
 
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/media/PressPioneersLogo.png" alt="Logo" class="vh-5"></a>
+        <a class="navbar-brand" href="{{route('homepage')}}"><img src="/media/PressPioneersLogo.png" alt="Logo" class="vh-5"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto ps-5 mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white ps-5" aria-current="page" href="#">Homepage</a>
+                    <a class="nav-link text-white ps-5" aria-current="page" href="{{route('homepage')}}">Homepage</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">News</a>
@@ -38,13 +38,13 @@
 
 
             @auth
-                <button href="#" class="btn custom-2">
+                <button href="{{route('article.create')}}" class="btn custom-2 m-2">
                     <li class="nav-item">
                         <span class="card-link">Inserisci un articolo</span>
                     </li>
                 </button>
 
-                <li class="nav-item dropdown p-3">
+                <li class="nav-item dropdown p-2">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> Benvenuto, {{ Auth::user()->name }}
@@ -66,7 +66,7 @@
             @endauth
 
             @guest
-                <li class="nav-item dropdown p-3">
+                <li class="nav-item dropdown m-3">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user"></i> Benvenuto, ospite
@@ -79,12 +79,12 @@
             @endguest
 
             @if (Auth::check() && Auth::user()->is_admin)
-                <li><a class="dropdown-item" href="{{ route('admin.dashboard') }}">Dashboard Admin</a></li>
+                <li><a class="dropdown-item m-3" href="{{ route('admin.dashboard') }}">Dashboard dell'Admin</a></li>
             @endif
 
 
             @if (Auth::check() && Auth::user()->is_revisor)
-                <li><a class="dropdown-item" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
+                <li><a class="dropdown-item m-3" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
             @endif
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Ricerca..." aria-label="Search">
