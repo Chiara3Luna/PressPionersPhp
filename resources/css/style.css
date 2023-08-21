@@ -1,0 +1,93 @@
+:root {
+    --main: rgb(245, 229, 213);
+    --sec: rgba(24, 31, 37, 0.848);
+    --acc: rgb(245, 245, 245);
+}
+
+/* * {
+    font-family: 'Lobster', 'Frank Ruhl Libre', 'M PLUS Rounded 1c', sans-serif;
+} */
+
+/* colore background */
+.bg-1 {
+    background-color: var(--main);
+}
+
+.bg-2 {
+    background-color: var(--sec);
+}
+
+.bg-3 {
+    background-color: var(--acc);
+}
+/* fine colore background */
+
+/* colore testi */
+.color-1 {
+    color: var(--main);
+}
+
+.color-2 {
+    color: var(--sec);
+}
+
+.color-3 {
+    color: var(--acc);
+}
+/* fine colore testi */
+
+/* per il logo */
+.vh-5{
+    height: 5vh;
+}
+/* fine logo */
+
+/* navbar */
+li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* fine navbar */
+
+h1 {
+    font-family: 'Lobster';
+    font-weight: 600;
+    font-size: 7vh;
+    letter-spacing: 3px;
+}
+
+h1::before {
+    content: 'ʽʽ';
+    font-size: 10vh;
+    margin-right: 2vh;
+}
+
+h1::after {
+    content: ',,';
+    font-size: 10vh;
+    margin-left: 2vh;
+}
+
+
+/* per le card (e il button delle card) */
+.zoom{
+    transition: transform .2s;
+    width: 23%;
+}
+
+.zoom:hover{
+    transform: scale(1.05);
+}
+
+.custom-1{
+    color:white;
+    background-color: var(--sec);
+}
+/* fine card (e il button delle card) */
+
+/* colore button della navbar */
+.custom-2{
+    background-color: var(--main);
+}
+/* fine colore button della navbar */
