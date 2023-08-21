@@ -18,7 +18,7 @@
                         <h5 class="card-title">{{ $article->created_at->format('d/m/Y')}}</h5>
                         <p class="card-text">{{ $article->subtitle }}</p>
                         <div class="d-flex justify-content-between">
-                            <p class="d-flex align-items-center mt-2">(Categoria: {{ $article->category->name }})</p>
+                            <a href="{{route('article.byCategory',['category'=>$article->category->id])}}" class="d-flex align-items-center mt-2">(Categoria: {{ $article->category->name }})</a>
                             <p>Redattore: <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}"
                                 class="small text-muted fst-italic text-capitalize"
                                 style="text-decoration: none">{{ $article->user->name }}</a></p>

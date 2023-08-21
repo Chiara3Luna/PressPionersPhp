@@ -19,9 +19,15 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
+                    {{-- dropdown category correggere collegamento --}}
                     <ul class="dropdown-menu bg-3">
-                        <li><a class="dropdown-item dropdown-hover" href="#">Sfoglia tutte</a></li>
                         <li><a class="dropdown-item dropdown-hover" href="#">Le più lette</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/1">Politica</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/2">Economia</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/3">Food&Drink</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/4">Sport</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/5">Intrattenimento</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="./article/category/6">Tech</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -31,7 +37,7 @@
                     </a>
                     <ul class="dropdown-menu bg-3">
                         <li><a class="dropdown-item dropdown-hover" href="#">Il nostro team</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="#">Lavora con noi</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="{{route('careers')}}">Lavora con noi</a></li>
                     </ul>
                 </li>
             </ul>
