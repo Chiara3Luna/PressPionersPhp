@@ -15,7 +15,11 @@
 <body class="bg-1">
     
     <x-navbar />
-
+@if (session()->has('message'))
+<div class="alert alert-success">
+{{session('message')}}
+</div>
+@endif
     <div>
         {{$slot}}
         <h1 class="text-center pb-3 display-1">The Aulab Post</h1>
