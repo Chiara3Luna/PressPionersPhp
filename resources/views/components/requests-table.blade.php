@@ -14,7 +14,7 @@
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
             <td>
-                <button class="btn btn-info text-white">Attiva {{$role}}</button>
+                <button class="btn custom-1">Attiva {{$role}}</button>
             </td>
             
             
@@ -22,13 +22,13 @@
                 
                 @switch($role)
                 @case('amministratore')
-                <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn custom-1">Attiva {{$role}}</a>
                 @break
                 @case('revisore')
-                <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn custom-1">Attiva {{$role}}</a>
                 @break
                 @case('redattore')
-                <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                <a href="{{route('admin.setWriter', compact('user'))}}" class="btn custom-1">Attiva {{$role}}</a>
                 @break
                 @endswitch
             </td>

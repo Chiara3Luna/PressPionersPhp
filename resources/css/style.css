@@ -57,18 +57,7 @@ h1 {
     font-weight: 500;
     font-size: 7vh;
     letter-spacing: 3px;
-}
-
-h1::before {
-    content: '“';
     font-size: 10vh;
-    margin-right: 2vh;
-}
-
-h1::after {
-    content: '„';
-    font-size: 10vh;
-    margin-left: 2vh;
 }
 
 h2{
