@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
                         <p>Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
-                        <a href="{{route('article.show', compact('article'))}}" class="btn btn-indo text-white">Leggi</a>
+                        <a href="{{route('article.show', compact('article'))}}" class="btn custom-1">Leggi</a>
                         
                     </div>
                 </div>

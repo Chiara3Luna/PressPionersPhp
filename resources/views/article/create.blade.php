@@ -62,8 +62,8 @@
                 </div>
                 
                 <div class="mt-2">
-                    <button class="btn btn-info text-white">Inserisci un articolo</button>
-                    <a href="{{ route('homepage') }}" class="btn btn-outline.info">Torna alla home</a>
+                    <button class="btn custom-1">Inserisci un articolo</button>
+                    <a href="{{ route('homepage') }}" class="btn custom-1">Torna alla home</a>
                 </div>
             </form>
             
