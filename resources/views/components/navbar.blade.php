@@ -23,8 +23,8 @@
                         Categorie
                     </a>
                     <ul class="dropdown-menu bg-3">
-                        <li><a class="dropdown-item" href="#">Sfoglia tutte</a></li>
-                        <li><a class="dropdown-item" href="#">Le più lette</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="#">Sfoglia tutte</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="#">Le più lette</a></li>
                     </ul>
                 </li>
             </ul>
@@ -43,11 +43,11 @@
                         <i class="fa-solid fa-user"></i> Benvenuto, {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="" class="dropdown-item">Profilo</a></li>
+                        <li><a href="" class="dropdown-item dropdown-hover">Profilo</a></li>
                         <li>
-                            <hr class="dropdown-divider">
+
                         </li>
-                        <li><a href="#" class="dropdown-item"
+                        <li><a href="#" class="dropdown-item dropdown-hover"
                             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                         </li>
                         <form action="{{ route('logout') }}" method="post" id="form-logout" class="d-none">
@@ -65,8 +65,8 @@
                         <i class="fa-solid fa-user"></i> Benvenuto, ospite
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a href="{{ route('register') }}" class="dropdown-item">Registrati</a></li>
-                        <li><a href="{{ route('login') }}" class="dropdown-item">Accedi</a></li>
+                        <li><a href="{{ route('register') }}" class="dropdown-item dropdown-hover">Registrati</a></li>
+                        <li><a href="{{ route('login') }}" class="dropdown-item dropdown-hover">Accedi</a></li>
                     </ul>
                 </li>
             @endguest

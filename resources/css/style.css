@@ -84,6 +84,10 @@ h1::after {
     color:white;
     background-color: var(--sec);
 }
+
+.custom-1:hover{
+    border-color: var(--sec);
+}
 /* fine card (e il button delle card) */
 
 /* colore button della navbar */
@@ -91,3 +95,9 @@ h1::after {
     background-color: var(--main);
 }
 /* fine colore button della navbar */
+
+.dropdown-hover:hover{
+    background-color: var(--sec);
+    color: white;
+    border-radius: 5px;
+}
