@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Accedi
@@ -21,7 +21,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('login') }}" class="card p-5 shadow" method="post">
+                <form action="{{ route('login') }}" class="card p-5 shadow bg-3" method="post">
                     @csrf
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
@@ -35,8 +35,8 @@
                     </div>
 
                     <div class="mt-2">
-                        <button class="btn btn-info text-white">Accedi</button>
-                        <p class="small pt-2">Non sei registrato? <a href="{{ route('register') }}">Clicca qui</a></p>
+                        <button class="btn custom-1">Accedi</button>
+                        <p class="pt-2 text-center">Non sei registrato? <a href="{{ route('register') }}" class="btn custom-1">Clicca qui</a></p>
                     </div>
                 </form>
 

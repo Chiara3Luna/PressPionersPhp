@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Registrati
@@ -22,11 +22,11 @@
                     </div>
                 @endif
 
-                <form action="{{route('register')}}" class="card p-5 shadow" method="POST">
+                <form action="{{route('register')}}" class="card p-5 shadow bg-3" method="POST">
                     @csrf
 
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
+                        <label for="username" class="form-label">Username:</label>
                         <input type="text" name="name" class="form-control" id="username" value="{{old('name')}}">
                     </div>
 
@@ -46,9 +46,9 @@
                     </div>
 
                     <div class="mt-2">
-                        <button class="btn bg-info text-white"> Registrati
+                        <button class="btn custom-1"> Registrati
                         </button>
-                        <p class="small mt-2">Già registrato? <a href="{{route('login')}}">Clicca qui</a></p>
+                        <p class="text-center">Già registrato? <a href="{{route('login')}}" class="btn custom-1">Accedi</a></p>
                     </div>
                 </form>
 

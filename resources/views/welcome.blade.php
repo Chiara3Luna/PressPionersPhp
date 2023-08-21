@@ -1,13 +1,11 @@
 <x-layout>
+    <x-header />
     
-    
-    
-    
-    
+
     {{-- Inizio inserimento di un articolo --}}
     <div class="container my-5">
         <div class="row justify-content-around">
-            @foreach($articles as $article)
+            @forelse($articles as $article)
             <div class="col-12 col-md-3">
                 <div class="card">
                     <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="...">
@@ -30,7 +28,9 @@
                 </div>
                 
             </div>
-            @endforeach
+            @empty
+            <h4>Non ci sono ancora articoli, <a href="" class="btn custom-1">Inserisci articolo</a></h4>
+            @endforelse
             
         </div>
         

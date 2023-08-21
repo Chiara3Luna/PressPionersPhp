@@ -14,9 +14,6 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">News</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Le più cliccate</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -25,6 +22,16 @@
                     <ul class="dropdown-menu bg-3">
                         <li><a class="dropdown-item dropdown-hover" href="#">Sfoglia tutte</a></li>
                         <li><a class="dropdown-item dropdown-hover" href="#">Le più lette</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Chi siamo
+                    </a>
+                    <ul class="dropdown-menu bg-3">
+                        <li><a class="dropdown-item dropdown-hover" href="#">Il nostro team</a></li>
+                        <li><a class="dropdown-item dropdown-hover" href="#">Lavora con noi</a></li>
                     </ul>
                 </li>
             </ul>

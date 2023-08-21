@@ -58,13 +58,13 @@ h1 {
 }
 
 h1::before {
-    content: 'ʽʽ';
+    content: '"';
     font-size: 10vh;
     margin-right: 2vh;
 }
 
 h1::after {
-    content: ',,';
+    content: '"';
     font-size: 10vh;
     margin-left: 2vh;
 }
@@ -93,6 +93,10 @@ h1::after {
 /* colore button della navbar */
 .custom-2{
     background-color: var(--main);
+}
+
+.custom-2:hover{
+    border-color: var(--main);
 }
 /* fine colore button della navbar */
 
