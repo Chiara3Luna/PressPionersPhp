@@ -88,7 +88,7 @@
             @endif
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Ricerca..." aria-label="Search">
-                <button class="btn bg-1" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="btn custom-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </div>

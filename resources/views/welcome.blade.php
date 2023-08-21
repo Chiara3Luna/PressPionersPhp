@@ -29,7 +29,7 @@
                 
             </div>
             @empty
-            <h4>Non ci sono ancora articoli, <a href="" class="btn custom-1">Inserisci articolo</a></h4>
+            <h4 class="text-center pt-5">Non ci sono ancora articoli, <a href="#" class="btn custom-1">Inseriscine uno</a></h4>
             @endforelse
             
         </div>
