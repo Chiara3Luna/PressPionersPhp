@@ -22,7 +22,7 @@
                             <p>Redattore: <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}"
                                 class="small text-muted fst-italic text-capitalize"
                                 style="text-decoration: none">{{ $article->user->name }}</a></p>
-                            <button href="" class="btn custom-1"><span class="card-link">Leggi</span></button>
+                            <a href="{{route('article.show', compact('article'))}}" class="btn custom-1"><span class="card-link">Leggi</span></a>
                         </div>
                     </div>
                 </div>
