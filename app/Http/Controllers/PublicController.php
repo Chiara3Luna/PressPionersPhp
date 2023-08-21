@@ -53,7 +53,7 @@ class PublicController extends Controller
 
         $user->update(); //Da questo errore per via dell'estensione ma può essere lasciato così
 
-        return redirect(route('homepage'))->whit('message', 'Grazie per averci contattato!');
+        return redirect(route('homepage'))->with('message', 'Grazie per averci contattato!');
     }
     
 }
