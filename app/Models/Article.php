@@ -3,6 +3,8 @@
 namespace App\Models;
 // trait searchable importato
 use Laravel\Scout\Searchable;  
+use App\Models\Tag;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
