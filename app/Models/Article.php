@@ -1,13 +1,19 @@
 <?php
 
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+// trait searchable importato
+use Laravel\Scout\Searchable;  
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
+
+    // qui abbiamo aggiunto il trait Searchable
+
+
+
 
     protected $fillable = [
         'title',
@@ -30,4 +36,16 @@ class Article extends Model
     public function tags(){
         return $this->belongsToMany(Tag::class);
     }
+      // qui abbiamo aggiunto il trait Searchable
+    
+    public function toSearchableArray(){
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'body' => $this->title,
+            'category' => $this->category,
+        ];
+    }
+
+
 }

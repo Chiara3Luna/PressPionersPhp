@@ -44,11 +44,11 @@
 
 
             @auth
-                <button href="{{route('article.create')}}" class="btn custom-2 m-2">
+                <a href="{{route('article.create')}}" class="btn custom-2 m-2">
                     <li class="nav-item">
                         <span class="card-link">Inserisci un articolo</span>
                     </li>
-                </button>
+                </a>
 
                 <li class="nav-item dropdown p-2">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
@@ -92,8 +92,8 @@
             @if (Auth::check() && Auth::user()->is_revisor)
                 <li><a class="dropdown-item m-3" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a></li>
             @endif
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Ricerca..." aria-label="Search">
+            <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                <input class="form-control me-2" type="search" name="query" placeholder="Cerca in AulabPost" aria-label="Search">
                 <button class="btn custom-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
