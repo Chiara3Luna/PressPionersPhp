@@ -108,4 +108,13 @@ class ArticleController extends Controller
     {
         //
     }
+
+    // logica barra search
+
+    public function articleSearch(Request $request){
+        $query = $request->input('query');
+        $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+
+        return view('article.search-index', compact('articles', 'query'));
+    }
 }
