@@ -44,11 +44,11 @@
 
 
             @auth
-                <button href="{{route('article.create')}}" class="btn custom-2 m-2">
+                <a href="{{route('article.create')}}" class="btn custom-2 m-2">
                     <li class="nav-item">
                         <span class="card-link">Inserisci un articolo</span>
                     </li>
-                </button>
+                </a>
 
                 <li class="nav-item dropdown p-2">
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"

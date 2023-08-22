@@ -2,7 +2,7 @@
     
     <div class="container-fluid p-5">
         <div class="row justify content-center">
-            <h1 class="display-1">
+            <h1 class="display-1 text-center">
                 Inserisci un articolo
             </h1>
         </div>
