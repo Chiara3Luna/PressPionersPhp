@@ -50,4 +50,14 @@ class AdminController extends Controller
 
         
     }
+
+    public function deleteTag(Tag $tag){
+        foreach($tag->articles as $article){
+            $article->tags()->detach($tag);
+        }
+
+        $tag->delete();
+
+        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente eliminato il tag');
+    }
 }

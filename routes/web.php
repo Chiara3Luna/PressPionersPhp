@@ -57,6 +57,9 @@ Route::middleware('admin')->group(function(){
 
     //Rotta editing Admin
     Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editing'])->name('admin.editTag');
+
+    //Rotta per cancellazione
+    Route::delete('/admin/delete/{tag}/tag', [AdminController::class, 'deleteTag'])->name('admin.deleteTag');
 });
 
 //Rotta che ci porta al revisore
