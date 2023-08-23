@@ -58,8 +58,14 @@ Route::middleware('admin')->group(function(){
     //Rotta editing Admin
     Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editing'])->name('admin.editTag');
 
-    //Rotta per cancellazione
+    //Rotta per cancellazione tag
     Route::delete('/admin/delete/{tag}/tag', [AdminController::class, 'deleteTag'])->name('admin.deleteTag');
+
+    //Rotta per categorie Admin
+    Route::put('/admin/edit/{category}/category', [AdminController::class. 'editCategory'])->name('admin.editCategory');
+
+    //Rotta per cancellazione categorie
+    Route::delete('/admin/delete/{category}/category', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
 });
 
 //Rotta che ci porta al revisore
@@ -73,6 +79,9 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
     //Rotta che permette il funzionamento della barra search
     Route::get('/article/search', [ArticleController::class,'articleSearch'])->name('article.search');
+
+    //Rotta per la creazione di nuove categorie
+    Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
 
 
 });
