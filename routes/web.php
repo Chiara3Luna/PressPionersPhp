@@ -67,6 +67,7 @@ Route::middleware('admin')->group(function(){
     //Rotta per cancellazione categorie
     Route::delete('/admin/delete/{category}/category', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
 });
+    //Rotta che permette il funzionamento della barra search
 Route::get('/article/search', [ArticleController::class,'articleSearch'])->name('article.search');
 //Rotta che ci porta al revisore
 Route::middleware('revisor')->group(function(){
@@ -77,7 +78,7 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
     //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
-    //Rotta che permette il funzionamento della barra search
+
     
 
     //Rotta per la creazione di nuove categorie
