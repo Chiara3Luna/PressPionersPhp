@@ -12,9 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link text-white ps-5" aria-current="page" href="{{ route('homepage') }}">Homepage</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link text-white" href="#">News</a>
-                </li>
+                </li> --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,6 +23,7 @@
                     {{-- dropdown category correggere collegamento --}}
                     <ul class="dropdown-menu bg-3">
                         {{-- <li><a class="dropdown-item dropdown-hover" href="#">Le più lette</a></li> --}}
+                        <li><a class="dropdown-item dropdown-hover" href="./article/index">Tutti gli articoli</a></li>
                         <li><a class="dropdown-item dropdown-hover" href="./article/category/1">Politica</a></li>
                         <li><a class="dropdown-item dropdown-hover" href="./article/category/2">Economia</a></li>
                         <li><a class="dropdown-item dropdown-hover" href="./article/category/3">Food&Drink</a></li>
