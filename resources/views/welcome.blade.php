@@ -11,8 +11,8 @@
                         <div class="col-3 zoom">
 
                         </div>
-                        <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                            class="small text-muted fst-italic text-capitalize">{{ $article->category->name }}</a>
+                        {{-- <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
+                            class="small text-muted fst-italic text-capitalize">{{ $article->category->name }}</a> --}}
                     @else
                         <p class="small text-muted fst-italic text-capitalize">
                             Non categorizzato
@@ -21,7 +21,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <img src="https://picsum.photos/250/170" alt="Immagine di repertorio">
+                            <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio">
                             <hr>
                             <h3 class="card-title">{{ $article->title }}</h3>
                             <hr>
@@ -29,7 +29,7 @@
                             <p class="card-text">{{ $article->subtitle }}</p>
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                    class="d-flex align-items-center mt-2">(Categoria:
+                                    class="d-flex align-items-center mt-2 no-line">(Categoria:
                                     {{ $article->category->name }})</a>
                                 <p>Redattore: <a
                                         href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}"
