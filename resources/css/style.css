@@ -97,6 +97,27 @@ h3, h4, h5, h6, p{
 .custom-2:hover{
     border-color: var(--main);
 }
+
+.custom-3{
+    background-color: #51E18D;
+    font-weight: 700;
+}
+
+.custom-3:hover{
+    border-color: #51E18D;
+    background-color: var(--acc);
+    
+}
+
+.custom-4{
+    background-color: #e33944;
+    color:var(--acc);
+    font-weight: 700;
+}
+
+.custom-4:hover{
+    border-color: #e33944;
+}
 /* fine colore button della navbar */
 
 .dropdown-hover:hover{

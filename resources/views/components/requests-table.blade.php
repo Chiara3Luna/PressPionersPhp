@@ -13,13 +13,9 @@
             <th scope="row">{{$user->id}}</th>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
-            <td>
-                <button class="btn custom-1">Attiva {{$role}}</button>
-            </td>
             
             
             <td>
-                
                 @switch($role)
                 @case('amministratore')
                 <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn custom-1">Attiva {{$role}}</a>

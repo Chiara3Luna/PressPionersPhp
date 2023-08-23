@@ -79,8 +79,6 @@ Route::middleware('revisor')->group(function(){
     //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 
-    
-
     //Rotta per la creazione di nuove categorie
     Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
 
