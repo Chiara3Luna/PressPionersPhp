@@ -22,7 +22,6 @@
 .bg-3 {
     background-color: var(--acc);
 }
-/* fine colore background */
 
 /* colore testi */
 .color-1 {
@@ -36,13 +35,11 @@
 .color-3 {
     color: var(--acc);
 }
-/* fine colore testi */
 
 /* per il logo */
 .vh-5{
     height: 5vh;
 }
-/* fine logo */
 
 /* navbar */
 li{
@@ -50,7 +47,6 @@ li{
     padding: 0;
     margin: 0;
 }
-/* fine navbar */
 
 h1 {
     font-family: 'Yatra One', cursive;
@@ -87,7 +83,6 @@ h3, h4, h5, h6, p{
 .custom-1:hover{
     border-color: var(--sec);
 }
-/* fine card (e il button delle card) */
 
 /* colore button della navbar */
 .custom-2{
@@ -99,18 +94,18 @@ h3, h4, h5, h6, p{
 }
 
 .custom-3{
-    background-color: #51E18D;
+    background-color: #157347;
     font-weight: 700;
+    color: var(--acc);
 }
 
 .custom-3:hover{
-    border-color: #51E18D;
+    border-color: #157347;
     background-color: var(--acc);
-    
 }
 
 .custom-4{
-    background-color: #e33944;
+    background-color: #ca333d;
     color:var(--acc);
     font-weight: 700;
 }
@@ -118,7 +113,6 @@ h3, h4, h5, h6, p{
 .custom-4:hover{
     border-color: #e33944;
 }
-/* fine colore button della navbar */
 
 .dropdown-hover:hover{
     background-color: var(--sec);
@@ -127,9 +121,13 @@ h3, h4, h5, h6, p{
 }
 
 /* text decoration none per i link */
-
 .no-line{
     text-decoration: none;
     color: var(--sec);
+}
 
+
+/* colore tabelle */
+.table-dark{
+    --bs-table-bg: var(--sec);
 }

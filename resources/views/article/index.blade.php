@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                        {{$article->created_at->format('d/m/Y')}} da <a style="text-decoration: none" href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}" class="text-muted fst-italic text-capitalize">{{$article->user->name}}</a>
+                        {{$article->created_at->format('d/m/Y')}} da <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}" class="text-muted fst-italic text-capitalize no-line">{{$article->user->name}}</a>
                         <a href="{{route('article.show', compact('article'))}}" class="btn custom-1">Leggi</a>
                         
                         {{-- Adesso però dobbiamo dare la possibilità agli utenti di raggiungere questa vista quindi aggiorniamo le card (DA FAR VEDERE) --}}

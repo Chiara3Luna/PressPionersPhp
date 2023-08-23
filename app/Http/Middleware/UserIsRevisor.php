@@ -22,6 +22,6 @@ class UserIsRevisor
             return $next($request);
         }
 
-        return redirect(route('homepage'))->with('message', 'Non sei autorizzato');
+        return redirect(route('homepage'))->with('unauthorized', 'Non sei autorizzato');
     }
 }

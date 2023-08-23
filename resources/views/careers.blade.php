@@ -8,7 +8,7 @@
     </div>
     
     <div class="container my-3">
-        <div class="row justify-content-center align-items-center border rounded p-2 shadow bg-3">
+        <div class="row justify-content-center align-items-center border rounded-4 p-2 shadow bg-3">
             <div class="col-12 col-md-6">
                 <h2>Lavora come amministratore</h2>
                 <p>Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit provident iste, laboriosam deleniti minima, vitae aut molestias esse eum sequi totam labore perspiciatis rem dicta quisquam hic necessitatibus. Facilis?</p>
@@ -55,6 +55,7 @@
             </div>
         </div>
     </div>
+    
 </x-layout>
 
 

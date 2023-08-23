@@ -24,8 +24,14 @@
     
     <x-navbar />
 @if (session()->has('message'))
-<div class="alert alert-success">
+<div class="alert alert-success text-center">
 {{session('message')}}
+</div>
+@endif
+
+@if (session()->has('unauthorized'))
+<div class="alert alert-danger text-center">
+{{session('unauthorized')}}
 </div>
 @endif
     <div>

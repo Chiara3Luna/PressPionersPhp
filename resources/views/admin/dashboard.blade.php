@@ -2,17 +2,11 @@
     
     <div class="container-fluid p-3 text-center">
         <div class="row justify-content-center">
-            <h1 class="display-2">
+            <h2 class="display-3">
                 Bentornato, Admin
-            </h1>
+            </h2>
         </div>
     </div>
-    
-    @if(session('message'))
-    <div class="alert alert-success text-center">
-        {{session('message')}}
-    </div>
-    @endif
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -38,9 +32,9 @@
             </div>
         </div>
         <hr>
-        <div class="container my-5">
+        <div class="container my-5 p-0">
             <div class="col-12">
-                <h2>I tags della piattaforma</h2>
+                <h2>Tag della piattaforma</h2>
                 <x-metainfo-table :metaInfos="$tags" metaType="tags" />
             </div>
         </div>
@@ -48,7 +42,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Le categorie della piattaforma</h2>
+                <h2>Categorie della piattaforma</h2>
                 <x-metainfo-table :metaInfos="$categories" metaType="categorie" />
                 <form action="{{route('admin.storeCategory')}}" method="POST" class="d-flex">
                     @csrf

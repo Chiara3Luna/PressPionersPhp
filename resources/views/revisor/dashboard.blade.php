@@ -1,18 +1,12 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
-            <h1 class="display-1">
+            <h1 class="display-2">
                 Bentornato, Revisore
             </h1>
         </div>
     </div>
-
-    @if(session('message'))
-    <div class="aler alert-success text-center">
-        {{session('message')}}
-    </div>
-    @endif
 
     <div class="container my-5">
         <div class="row justify-content-center">
