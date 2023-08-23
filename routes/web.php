@@ -66,6 +66,9 @@ Route::middleware('admin')->group(function(){
 
     //Rotta per cancellazione categorie
     Route::delete('/admin/delete/{category}/category', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
+
+    //Rotta per la creazione di nuove categorie
+    Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
 });
     //Rotta che permette il funzionamento della barra search
 Route::get('/article/search', [ArticleController::class,'articleSearch'])->name('article.search');
@@ -80,7 +83,6 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 
     //Rotta per la creazione di nuove categorie
-    Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
 
 
 });
