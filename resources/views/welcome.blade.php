@@ -7,6 +7,13 @@
         <div class="row justify-content-around">
             @forelse($articles as $article)
             
+            @if ($article->category)
+            <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
+            @else
+            <p class="small text-muted fst-italic text-capitalize">
+                Non categorizzato
+            </p>
+            @endif
             <div class="col-12 col-md-3 zoom">
 
                 <div class="card">
@@ -36,12 +43,5 @@
 
     </div>
 
-    @if ($article->category)
-    <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
-    @else
-    <p class="small text-muted fst-italic text-capitalize">
-        Non categorizzato
-    </p>
-    @endif
 
 </x-layout>
