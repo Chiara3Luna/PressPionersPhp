@@ -16,7 +16,7 @@
             <td>{{count($metaInfo->articles)}}</td>
             @if($metaType == "tags")
             <td>
-                <form action="{{route('admin.editTag', ['tag' => $metainfo])}}" method="POST">
+                <form action="{{route('admin.editTag', ['tag' => $metaInfo])}}" method="POST">
                     @csrf
                     @method('put')
                     <input type="text" name="name" placeholder="Nuovo nome tag" class="form-control w-50 d-inline">

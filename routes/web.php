@@ -56,18 +56,18 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 
     //Rotta editing Admin
-    Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editing'])->name('admin.editTag');
+    Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editTag'])->name('admin.editTag');
 
     //Rotta per cancellazione tag
     Route::delete('/admin/delete/{tag}/tag', [AdminController::class, 'deleteTag'])->name('admin.deleteTag');
 
     //Rotta per categorie Admin
-    Route::put('/admin/edit/{category}/category', [AdminController::class. 'editCategory'])->name('admin.editCategory');
+    Route::put('/admin/edit/{category}/category', [AdminController::class, 'editCategory'])->name('admin.editCategory');
 
     //Rotta per cancellazione categorie
     Route::delete('/admin/delete/{category}/category', [AdminController::class, 'deleteCategory'])->name('admin.deleteCategory');
 });
-
+Route::get('/article/search', [ArticleController::class,'articleSearch'])->name('article.search');
 //Rotta che ci porta al revisore
 Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
@@ -78,7 +78,7 @@ Route::middleware('revisor')->group(function(){
     //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
     //Rotta che permette il funzionamento della barra search
-    Route::get('/article/search', [ArticleController::class,'articleSearch'])->name('article.search');
+    
 
     //Rotta per la creazione di nuove categorie
     Route::post('/admin/category/store', [AdminController::class, 'storeCategory'])->name('admin.storeCategory');
