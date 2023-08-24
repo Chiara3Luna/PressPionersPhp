@@ -29,6 +29,12 @@ Route::post('/article/store', [ArticleController::class, 'store'])->name('articl
 //Rotta per la dashboard del redattore-writer
 Route::get('/writer/dashboard/', [WriterController::class, 'dashboard'])->name('writer.dashboard');
 
+//Rotta aggiornamento dell'articolo
+Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+
+//Rotta
+Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+
 });
 
 //Rotta article index
