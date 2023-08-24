@@ -130,7 +130,7 @@ class ArticleController extends Controller
             'body' => $request->body,
             'category_id' => $request->category,
             'slug' => Str::slug($request->title),
-            
+            'is_accepted'=>NULL,
         ]);
         
         if($request->image){
@@ -152,7 +152,6 @@ class ArticleController extends Controller
         }
 
         $article->tags()->sync($newTags);
-
     return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\' articolo scelto');
 
 }

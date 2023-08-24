@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="mt-2">
-                        <input type="submit" class="btn btn-info text-white" value="">
+                        <input type="submit" class="btn btn-info text-white" value="Inserisci un articolo">
                         <a href="{{route('homepage')}}" class="btn btn-outline-info">Torna alla home</a>
                     </div>
                 </form>
