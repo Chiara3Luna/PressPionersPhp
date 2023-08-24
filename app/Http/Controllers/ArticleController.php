@@ -112,8 +112,8 @@ class ArticleController extends Controller
     {
         $request->validate([
             
-            'title' => 'required|min:5|unique:articles, title' . $article->id,
-            'subtitle' => 'required|min:5|unique:articles, subtitle,' . $article->id,
+            'title' => 'required|min:5|unique:articles,title,' . $article->id,
+            'subtitle' => 'required|min:5|unique:articles,subtitle,' . $article->id,
             'body' => 'required|min:10',
             'image' => 'image',
             'category' => 'required',
@@ -150,7 +150,7 @@ class ArticleController extends Controller
 
         $article->tags()->sync($newTags);
 
-    return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\'articolo scelto');
+    return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\' articolo scelto');
 
 }
         
@@ -161,7 +161,13 @@ class ArticleController extends Controller
         */
         public function destroy(Article $article)
         {
-            //
+            foreach($article->tags as $tag){
+                $article->tags()->detach($tag);
+            }
+
+            $article->delete();
+
+            return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente cancellato l\' articolo scelto');
         }
         
         // logica barra search

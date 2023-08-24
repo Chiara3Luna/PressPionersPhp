@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WriterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +30,13 @@ Route::post('/article/store', [ArticleController::class, 'store'])->name('articl
 //Rotta per la dashboard del redattore-writer
 Route::get('/writer/dashboard/', [WriterController::class, 'dashboard'])->name('writer.dashboard');
 
-//Rotta aggiornamento dell'articolo
+//Rotta modifica dell'articolo
 Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
 
-//Rotta
+//Rotta aggiornamento articolo
 Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
-
+//Rotta cancellazione articolo
+Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
 
 //Rotta article index

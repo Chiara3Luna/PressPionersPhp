@@ -98,7 +98,7 @@
                     </li>
                 </a>
             @if (Auth::user()->is_writer)
-            <li><a class="dropdown-item" href="{{route('writer.dashboard'}}">Dashboard del redattore</a></li>
+            <li><a class="dropdown-item" href="{{route('writer.dashboard')}}">Dashboard del redattore</a></li>
             @endif
 
             

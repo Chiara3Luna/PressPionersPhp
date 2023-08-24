@@ -20,9 +20,9 @@
                 </div>
                 @endif
 
-                <form class="card p-5 shadow" action="" method="" enctype="multipart/form-data">
+                <form class="card p-5 shadow" action="{{route('article.update', compact('article'))}}" method="POST" enctype="multipart/form-data">
+                    @method('put')
                     @csrf
-
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo:</label>
                         <input name="title" type="text" class="form-control" id="title" value="{{$article->title}}">
@@ -40,7 +40,7 @@
                     <label for="category" class="form-label">Categoria:</label>
                         <select name="category" class="form-control text-capitalize" id="category">
                             @foreach($categories as $category)
-                            <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}></option>
+                            <option value="{{$category->id}}" @if($article->category && $category->id == $article->category->id) selected @endif>{{$category->name}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="mt-2">
-                        <button class="btn btn-info text-white">Inserisci un articolo</button>
+                        <input type="submit" class="btn btn-info text-white" value="">
                         <a href="{{route('homepage')}}" class="btn btn-outline-info">Torna alla home</a>
                     </div>
                 </form>
