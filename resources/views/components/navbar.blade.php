@@ -91,6 +91,9 @@
                             <span class="card-link">Inserisci un articolo</span>
                         </li>
                     </a>
+
+                    <li><a class="dropdown-item m-3" href="{{ route('writer.dashboard') }}">Dashboard del Redattore</a>
+                    </li>
                 @endif
                 <form class="d-flex vh-5" method="GET" action="{{ route('article.search') }}">
                     <input class="form-control me-2" type="search" name="query" placeholder="Cerca in Aulab Post"
