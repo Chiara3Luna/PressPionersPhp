@@ -25,6 +25,10 @@ Route::middleware('writer')->group(function(){
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 //Rotta article store
 Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+//Rotta per la dashboard del redattore-writer
+Route::get('/writer/dashboard/', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+
 });
 
 //Rotta article index
@@ -82,7 +86,7 @@ Route::middleware('revisor')->group(function(){
     //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 
-    //Rotta per la creazione di nuove categorie
+    
 
 
 });
