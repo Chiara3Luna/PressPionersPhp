@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\WriterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,17 @@ Route::middleware('writer')->group(function(){
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 //Rotta article store
 Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+//Rotta per la dashboard del redattore-writer
+Route::get('/writer/dashboard/', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+
+//Rotta modifica dell'articolo
+Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+
+//Rotta aggiornamento articolo
+Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+//Rotta cancellazione articolo
+Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
 });
 
 //Rotta article index
@@ -32,7 +44,7 @@ Route::get('/article/index', [ArticleController::class, 'index'])->name('article
 
 //Rotta article show
 
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/{article:slug}/show', [ArticleController::class, 'show'])->name('article.show');
 
 //Rotta per filtro per categoria
 Route::get('/article/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
@@ -82,7 +94,7 @@ Route::middleware('revisor')->group(function(){
     //Rotta che permette al revisore di rimandare in revisione un articolo per una scelta sbagliata
     Route::get('/revisor/{article}/undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 
-    //Rotta per la creazione di nuove categorie
+    
 
 
 });

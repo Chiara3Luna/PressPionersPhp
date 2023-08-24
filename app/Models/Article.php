@@ -25,6 +25,7 @@ class Article extends Model
         'user_id',
         'category_id',
         'is_accepted',
+        'slug',
     ];
 
     public function user(){
@@ -47,6 +48,11 @@ class Article extends Model
             'body' => $this->body,
             'category' => $this->category,
         ];
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 
 
