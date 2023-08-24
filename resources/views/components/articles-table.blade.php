@@ -27,11 +27,3 @@
     </tbody>
 </table>
 
-
-
-
-
-
-
-
-</table>

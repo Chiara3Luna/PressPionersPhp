@@ -23,6 +23,7 @@
                     <a class="no-line" href="{{route('article.search',['user'=> $article->user->id])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
                     <a href="{{route('article.show', compact('article'))}}" class="btn custom-1">Leggi</a>
                 </div>
+                <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
             </div>
         </div>
         @if ($article->category)
