@@ -38,6 +38,7 @@
                                 <a href="{{ route('article.show', compact('article')) }}"
                                     class="btn custom-1 d-flex align-items-center"><span
                                         class="card-link">Leggi</span></a>
+                                <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                             </div>
                         </div>
                     </div>
