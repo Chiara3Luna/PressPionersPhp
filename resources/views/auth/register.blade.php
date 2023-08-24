@@ -45,9 +45,10 @@
                         <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
                     </div>
 
-                    <div class="mt-2">
+                    <div class="mt-2 text-end">
                         <button class="btn custom-1"> Registrati
                         </button>
+                        <hr>
                         <p class="text-center">Già registrato? <a href="{{route('login')}}" class="btn custom-1">Accedi</a></p>
                     </div>
                 </form>

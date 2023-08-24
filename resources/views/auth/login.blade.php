@@ -34,9 +34,10 @@
                         <input type="password" name="password" class="form-control" id="password">
                     </div>
 
-                    <div class="mt-2">
+                    <div class="mt-2 text-end">
                         <button class="btn custom-1">Accedi</button>
-                        <p class="pt-2 text-center">Non sei registrato? <a href="{{ route('register') }}" class="btn custom-1">Clicca qui</a></p>
+                        <hr>
+                        <p class="text-center">Non sei registrato? <a href="{{ route('register') }}" class="btn custom-1">Clicca qui</a></p>
                     </div>
                 </form>
 

@@ -11,11 +11,11 @@
         <div class="row justify-content-center align-items-center border rounded-4 p-2 shadow bg-3">
             <div class="col-12 col-md-6">
                 <h2>Lavora come amministratore</h2>
-                <p>Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit provident iste, laboriosam deleniti minima, vitae aut molestias esse eum sequi totam labore perspiciatis rem dicta quisquam hic necessitatibus. Facilis?</p>
+                <p>Il ruolo che ricoprirai: in qualità di Amministratore, avrai accesso ad una sezione studiata appositamente per te: potrai approvare o rifiutare le candidature per le quali i nostri utenti si stanno candidando, gestire/aggiungere/modificare le categorie e i tag, e molto altro ancora!</p>
                 <h2>Lavora come revisore</h2>
-                <p>Cosa farai: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus, maiores, quos libero tempore natus tempora repellendus cum alias possimus facilis error temporibus eveniet amet in. Vel corporis officiis repellendus.</p>
+                <p>Il ruolo che ricoprirai: in qualità di Revisore, avrai una pagina a te dedicata, in cui passare in rassegna tutti gli articoli che arrivano in redazione: potrai accettarli, rifiutarli o lasciarli in pending!</p>
                 <h2>Lavora come redattore</h2>
-                <p>Cosa farai: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus provident omnis, autem nobis corrupti commodi. Magnam vitae eius odio non commodi, dolorum provident, rerum voluptatum sunt doloremque, aut quia ipsa.</p>
+                <p>Il ruolo che ricoprirai: in qualità di Redattore, potrai inserire gli articoli in un form dedicato, e collaborare con altri membri del team per rendere il nostro giornale completo, interattivo e privo di fake news! </p>
             </div>
             <div class="col-12 col-md-6">
                 @if ($errors->any())
@@ -48,7 +48,7 @@
                         <label for="message" class="form-label">Parlaci di te:</label>
                         <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
                     </div>
-                    <div class="mt-2">
+                    <div class="mt-2 text-end">
                         <button class="btn custom-1">Invia la tua candidatura</button>
                     </div>
                 </form>

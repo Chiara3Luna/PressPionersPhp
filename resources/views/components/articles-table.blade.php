@@ -19,7 +19,7 @@
                 @if(is_null($article->is_accepted))
                 <a href="{{route('article.show', compact('article'))}}" class="btn custom-1">Leggi l'articolo</a>
                 @else
-                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn bg-danger">Riporta in revisione</a>
+                <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn custom-1">Riporta in revisione</a>
                 @endif
             </td>
         </tr>

@@ -67,12 +67,12 @@
                     {{-- Bottoni accessibili solo al revisore --}}
                     @if(Auth::user() && Auth::user()->is_revisor)
                     <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <a href="{{route('article.index')}}" class="btn custom-1">Torna indietro</a>
+                        </div>
                         <div>
                             <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn custom-3 my-5">Accetta articolo</a>
                             <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn custom-4 my-5">Rifiuta articolo</a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <a href="{{route('article.index')}}" class="btn custom-1">Torna indietro</a>
                         </div>
                     </div>
                     @endif
