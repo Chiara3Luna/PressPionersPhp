@@ -21,12 +21,14 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio">
+                        <!-- <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo"> -->
+                        <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio">
                             <hr>
                             <h3 class="card-title">{{ $article->title }}</h3>
                             <hr>
                             <h5 class="card-title">{{ $article->created_at->format('d/m/Y') }}</h5>
                             <p class="card-text">{{ $article->subtitle }}</p>
+                            <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                     class="d-flex align-items-center mt-2 no-line">(Categoria:
@@ -38,7 +40,6 @@
                                 <a href="{{ route('article.show', compact('article')) }}"
                                     class="btn custom-1 d-flex align-items-center"><span
                                         class="card-link">Leggi</span></a>
-                                <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
                             </div>
                         </div>
                     </div>
