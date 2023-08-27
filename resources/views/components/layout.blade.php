@@ -38,7 +38,7 @@
         {{$slot}}
     </div>
 
-    <x-footer />
+    
     {{-- fontawesome icons --}}
     <script src="https://kit.fontawesome.com/5c8ba140a8.js" crossorigin="anonymous"></script>
 

@@ -1,8 +1,8 @@
-<footer class="text-center text-white bg-2">
+<footer class="text-center text-white bg-2 ">
   <!-- Grid container -->
   <div class="container-foot pt-4 ">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="mb-2">
       <!-- Facebook -->
       <a
         class="btn btn-link btn-floating btn-lg text-white m-1"

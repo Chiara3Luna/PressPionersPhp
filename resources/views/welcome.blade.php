@@ -57,3 +57,4 @@
     </div>
     
 </x-layout>
+<x-footer />
