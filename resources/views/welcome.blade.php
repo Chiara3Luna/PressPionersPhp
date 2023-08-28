@@ -25,16 +25,15 @@
                             <hr>
                             <h5 class="card-title">{{ $article->created_at->format('d/m/Y') }}</h5>
                             <p class="card-text">{{ $article->subtitle }}</p>
-                            <span class="text-muted small fst-italic">- tempo di lettura {{ $article->readDuration() }}
+                            <span class="text-muted small fst-italic">Tempo di lettura: {{ $article->readDuration() }}
                                 min</span>
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
-                                    class="d-flex align-items-center mt-2 no-line">(Categoria:
+                                    class="mt-2 no-line">(Categoria:
                                     {{ $article->category->name }})</a>
-                                <p>Redattore: <a
-                                        href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}"
-                                        class="small text-muted fst-italic text-capitalize no-line">
-                                        {{ $article->user->name }}</a></p>
+                                <a href="{{ route('article.byAuthors', ['author' => $article->user->id]) }}"
+                                    class="small text-muted fst-italic text-capitalize no-line d-flex align-items-center"> Redattore:
+                                    {{ $article->user->name }}</a>
                                 <a href="{{ route('article.show', compact('article')) }}"
                                     class="btn custom-1 d-flex align-items-center"><span
                                         class="card-link">Leggi</span></a>
