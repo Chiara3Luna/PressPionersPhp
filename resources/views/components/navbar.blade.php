@@ -19,13 +19,14 @@
                     </a>
                     {{-- dropdown category correggere collegamento --}}
                     <ul class="dropdown-menu bg-3">
-                        <li><a class="dropdown-item dropdown-hover" href="./article/index">Tutti gli articoli</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/1">Politica</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/2">Economia</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/3">Food&Drink</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/4">Sport</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/5">Intrattenimento</a></li>
-                        <li><a class="dropdown-item dropdown-hover" href="./article/category/6">Tech</a></li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" aria-current="page" href="{{ route('article.index') }}">Tutti gli articoli</a>
+                        </li>
+                        @foreach($categories as $category)
+                        <li>
+                            <a class="dropdown-item" href="{{route('article.byCategory',$category)}}">{{($category->name)}}</a>
+                        </li>
+                        @endforeach
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,7 +39,10 @@
                         </li>
                     </ul>
                 </li>
+
+              
             </ul>
+
 
             <div class="d-flex align-items-center ms-auto">
                 @auth

@@ -21,8 +21,8 @@
 
                     <div class="card">
                         <div class="card-body">
-                        <!-- <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo"> -->
-                        <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio">
+                        <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo">
+                        {{-- <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio"> --}}
                             <hr>
                             <h3 class="card-title">{{ $article->title }}</h3>
                             <hr>
@@ -57,4 +57,4 @@
     </div>
     
 </x-layout>
-<x-footer />
+

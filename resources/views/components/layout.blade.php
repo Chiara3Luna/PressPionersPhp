@@ -34,7 +34,7 @@
 {{session('unauthorized')}}
 </div>
 @endif
-    <div>
+    <div class="slot">
         {{$slot}}
     </div>
 
@@ -42,5 +42,6 @@
     {{-- fontawesome icons --}}
     <script src="https://kit.fontawesome.com/5c8ba140a8.js" crossorigin="anonymous"></script>
 
+    <x-footer />
 </body>
 </html>

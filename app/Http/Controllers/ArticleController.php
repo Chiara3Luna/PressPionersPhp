@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use App\Models\User;
-use Nette\Utils\Image;
+
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Str;
@@ -49,10 +49,10 @@ class ArticleController extends Controller
         ]);
 
         // Caricamento e manipolazione dell'immagine
-    $imagePath = $request->file('image')->store('public/images');
-    $image = Image::make(Storage::path($imagePath));
-    $image->fit(250, 170);
-    $image->save();
+    // $imagePath = $request->file('image')->store('public/images');
+    // $image = Image::make(Storage::path($imagePath));
+    // $image->fit(250, 170);
+    // $image->save();
         
         $article = Article::create([
             'title' => $request->title,

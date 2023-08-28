@@ -14,7 +14,7 @@
             @foreach($articles as $article)
             <div class="col-12 col-md-3 zoom">
                 <div class="card">
-                    <img src="{{--Storage::url($article->image)--}} https://picsum.photos/250/170?random={{$article->id}}" class="card-img-top" alt="Immagine di repertorio">
+                    <img src="{{ Storage::url($article->image) }}" class="card-img-top" alt="Immagine di repertorio">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
@@ -30,7 +30,7 @@
                         {{-- <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a> --}}
                         {{-- <a href="{{route('article.byAuthors', ['author' => $article->user->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->user->name }}</a> --}}
                     </div>
-                    
+                        
                 </div>
                 
             </div>

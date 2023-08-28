@@ -131,9 +131,7 @@ h3, h4, h5, h6, p{
 .table-dark{
     --bs-table-bg: var(--sec);
 }
-footer {
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    }
+
+.slot{
+    min-height: 75vh;
+}
