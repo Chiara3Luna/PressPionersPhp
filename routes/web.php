@@ -66,7 +66,8 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'setRevisor'])->name('admin.setRevisor');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
-
+    Route::get('/admin/{user}/reject-writer', [AdminController::class, 'rejectWriter'])->name('admin.rejectWriter');
+    Route::get('/admin/{user}/reject-revisor', [AdminController::class, 'rejectRevisor'])->name('admin.rejectRevisor');
     //Rotta editing Admin
     Route::put('/admin/edit/{tag}/tag', [AdminController::class, 'editTag'])->name('admin.editTag');
 

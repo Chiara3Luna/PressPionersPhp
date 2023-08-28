@@ -22,11 +22,11 @@
                 @break
                 @case('revisore')
                 <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn custom-3">Accetta</a>
-                <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn custom-4">Rifiuta </a>
+                <a href="{{route('admin.rejectRevisor', compact('user'))}}" class="btn custom-4">Rifiuta </a>
                 @break
                 @case('redattore')
                 <a href="{{route('admin.setWriter', compact('user'))}}" class="btn custom-3">Accetta</a>
-                <a href="{{route('admin.setWriter', compact('user'))}}" class="btn custom-4">Rifiuta</a>
+                <a href="{{route('admin.rejectWriter', compact('user'))}}" class="btn custom-4">Rifiuta</a>
                 @break
                 @endswitch
             </td>
