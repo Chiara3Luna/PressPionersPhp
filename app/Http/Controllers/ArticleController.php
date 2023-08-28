@@ -159,7 +159,7 @@ class ArticleController extends Controller
         }
 
         $article->tags()->sync($newTags);
-    return redirect(route('writer.dashboard'))->with('message', 'Hai correttamente aggiornato l\' articolo scelto');
+    return redirect(route('writer.dashboard'))->with('message', 'Articolo modificato correttamente, è stato riportato in revisione');
 
 }
         

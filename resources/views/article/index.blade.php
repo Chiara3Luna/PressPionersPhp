@@ -19,7 +19,7 @@
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->subtitle}}</p>
                         <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize no-line"><p class="text-muted fst-italic text-capitalize"> Categoria: {{$article->category->name}}</p> </a>
-                        <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
+                        <span class="text-muted small fst-italic ">Tempo di lettura: {{$article->readDuration()}} min</span>
                     </div>
 
                     <div class="card-footer text-muted d-flex justify-content-between align-items-center">
@@ -30,7 +30,7 @@
                         {{-- <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a> --}}
                         {{-- <a href="{{route('article.byAuthors', ['author' => $article->user->id]) }}" class="small text-muted fst-italic text-capitalize">{{ $article->user->name }}</a> --}}
                     </div>
-                        
+                    
                 </div>
                 
             </div>

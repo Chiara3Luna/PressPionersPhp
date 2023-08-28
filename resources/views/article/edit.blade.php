@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid custom-2 text-center pt-3">
         <div class="row justify-content-center">
             <h1 class="display-1">
                 Modifica un articolo
@@ -54,9 +54,9 @@
                         <span class="small fst-italic">Dividi ogni tag con una virgola</span>
                     </div>
 
-                    <div class="mt-2">
-                        <input type="submit" class="btn btn-info text-white" value="Inserisci un articolo">
-                        <a href="{{route('homepage')}}" class="btn btn-outline-info">Torna alla home</a>
+                    <div class="mt-2 text-end d-flex justify-content-between pt-1">
+                        <a href="{{route('homepage')}}" class="btn custom-1 fw-bold">Torna alla home</a>
+                        <input type="submit" class="btn custom-3" value="Modifica">
                     </div>
                 </form>
 
