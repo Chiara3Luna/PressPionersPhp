@@ -50,7 +50,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Chi siamo
                             </a>
-                            <ul class="dropdown-menu bg-3">
+                            <ul class="dropdown-menu bg-3 shadow">
                                 <li><a class="dropdown-item dropdown-hover" href="{{ route('careers') }}">Lavora con noi</a>
                                 </li>
                             </ul>

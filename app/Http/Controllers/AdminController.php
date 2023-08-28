@@ -30,6 +30,12 @@ class AdminController extends Controller
         ]);
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso revisore l\'utente scelto');
     }
+    public function rejectRevisor(User $user){
+        $user->update([
+            'is_revisor' => false,
+        ]);
+        return redirect(route('admin.dashboard'))->with('message', 'Hai rifiutato l\'utente scelto');
+    }
 
     public function setWriter(User $user){
         $user->update([
@@ -37,6 +43,13 @@ class AdminController extends Controller
         ]);
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
     }
+    public function rejectWriter(User $user){
+        $user->update([
+            'is_writer' => false,
+        ]);
+        return redirect(route('admin.dashboard'))->with('message', 'Hai rifiutato l\'utente scelto');
+    }
+
 
     public function editTag(Request $request, Tag $tag){
         $request->validate([
