@@ -20,27 +20,44 @@
                     {{-- dropdown category correggere collegamento --}}
                     <ul class="dropdown-menu bg-3">
                         <li class="nav-item">
-                            <a class="dropdown-item" aria-current="page" href="{{ route('article.index') }}">Tutti gli articoli</a>
+                            <a class="dropdown-item dropdown-hover" aria-current="page"
+                                href="{{ route('article.index') }}">Tutti gli articoli</a>
                         </li>
-                        @foreach($categories as $category)
-                        <li>
-                            <a class="dropdown-item" href="{{route('article.byCategory',$category)}}">{{($category->name)}}</a>
-                        </li>
+                        @foreach ($categories as $category)
+                            <li>
+                                <a class="dropdown-item dropdown-hover"
+                                    href="{{ route('article.byCategory', $category) }}">{{ $category->name }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Chi siamo
-                    </a>
-                    <ul class="dropdown-menu bg-3">
-                        <li><a class="dropdown-item dropdown-hover" href="{{ route('careers') }}">Lavora con noi</a>
-                        </li>
-                    </ul>
-                </li>
 
-              
+                @guest
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Chi siamo
+                        </a>
+                        <ul class="dropdown-menu bg-3">
+                            <li><a class="dropdown-item dropdown-hover" href="{{ route('careers') }}">Lavora con noi</a>
+                            </li>
+                        </ul>
+                    </li>
+                @else
+                    @if (!(Auth::user()->is_admin || Auth::user()->is_revisor || Auth::user()->is_writer))
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Chi siamo
+                            </a>
+                            <ul class="dropdown-menu bg-3">
+                                <li><a class="dropdown-item dropdown-hover" href="{{ route('careers') }}">Lavora con noi</a>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
+                @endguest
+
             </ul>
 
 
@@ -79,26 +96,32 @@
                     </li>
                 @endguest
 
-                @if (Auth::check() && Auth::user()->is_admin)
-                    <li><a class="dropdown-item m-3" href="{{ route('admin.dashboard') }}">Dashboard dell'Admin</a></li>
-                @endif
+                @auth
 
 
-                @if (Auth::check() && Auth::user()->is_revisor)
-                    <li><a class="dropdown-item m-3" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a>
-                    </li>
-                @endif
-
-                @if (Auth::check() && Auth::user()->is_writer)
-                    <a href="{{ route('article.create') }}" class="btn custom-2 m-2">
-                        <li class="nav-item">
-                            <span class="card-link">Inserisci un articolo</span>
+                    @if (Auth::check() && Auth::user()->is_admin)
+                        <li><a class="dropdown-item m-3" href="{{ route('admin.dashboard') }}">Dashboard dell'Admin</a>
                         </li>
-                    </a>
+                    @endif
 
-                    <li><a class="dropdown-item m-3" href="{{ route('writer.dashboard') }}">Dashboard del Redattore</a>
-                    </li>
-                @endif
+
+                    @if (Auth::check() && Auth::user()->is_revisor)
+                        <li><a class="dropdown-item m-3" href="{{ route('revisor.dashboard') }}">Dashboard del revisore</a>
+                        </li>
+                    @endif
+
+                    @if (Auth::check() && Auth::user()->is_writer)
+                        <a href="{{ route('article.create') }}" class="btn custom-2 m-2">
+                            <li class="nav-item">
+                                <span class="card-link">Inserisci un articolo</span>
+                            </li>
+                        </a>
+
+                        <li><a class="dropdown-item m-3" href="{{ route('writer.dashboard') }}">Dashboard del Redattore</a>
+                        </li>
+                    @endif
+
+                @endauth
                 <form class="d-flex vh-5" method="GET" action="{{ route('article.search') }}">
                     <input class="form-control me-2" type="search" name="query" placeholder="Cerca in Aulab Post"
                         aria-label="Search">
