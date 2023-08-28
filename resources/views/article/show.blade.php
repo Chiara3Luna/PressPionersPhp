@@ -39,13 +39,6 @@
     </div> --}}
 
 
-
-
-
-
-
-
-
     <div class="container my-3 bg-3 shadow rounded-4 text-center">
         <div class="row justify-content-around">
             <div class="col-7">
@@ -61,6 +54,7 @@
                     <div class="my-3 text-muted fst-italic d-flex justify-content-around">
                         <span>Data: {{$article->created_at->format('d/m/Y')}}</span>
                         <span class="text-capitalize">Redattore: {{$article->user->name}}</span>
+                        <span class="text-capitalize">Categoria: {{$article->category->name}}</span>
                     </div>
                 </div>
                 <div class="text-center">
@@ -68,7 +62,7 @@
                     @if(Auth::user() && Auth::user()->is_revisor)
                     <div class="d-flex justify-content-between">
                         <div class="d-flex align-items-center">
-                            <a href="{{route('article.index')}}" class="btn custom-1">Torna indietro</a>
+                            <a href="{{ route('revisor.dashboard') }}" class="btn custom-1">Torna indietro</a>
                         </div>
                         <div>
                             <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn custom-3 my-5">Accetta articolo</a>
@@ -81,7 +75,7 @@
 
             <div class="col">
                 <div>
-                    <img src="{{Storage::url($article->image)}}" alt="" class="img-fluid my-3">
+                    <img src="{{Storage::url($article->image)}}" alt="" class="img-fluid my-3 rounded-4">
                     {{-- <img src="https://picsum.photos/480/580" alt="Immagine" class="rounded-4 mt-5"> --}}
                 </div>
             </div>

@@ -123,9 +123,9 @@
 
                 @endauth
                 <form class="d-flex vh-5" method="GET" action="{{ route('article.search') }}">
-                    <input class="form-control me-2" type="search" name="query" placeholder="Cerca in Aulab Post"
+                    <input id="navSearch" class="form-control me-2" type="search" name="query" placeholder="Cerca in Aulab Post"
                         aria-label="Search">
-                    <button class="btn custom-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button id="searchButton" class="btn custom-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
             </div>
