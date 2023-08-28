@@ -34,13 +34,7 @@
                 </div>
                 
             </div>
-            @if ($article->category)
-            <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
-            @else
-            <p class="small text-muted fst-italic text-capitalize">
-                Non categorizzato
-            </p>
-            @endif
+
             @endforeach
             
         </div>
