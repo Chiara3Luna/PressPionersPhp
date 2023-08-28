@@ -135,10 +135,7 @@ h3, h4, h5, h6, p{
     min-height: 73.5vh;
 }
 
-
-
-
-
+/* animazione JS */
 #navSearch{
     opacity: 0;
     transition: 1s;
