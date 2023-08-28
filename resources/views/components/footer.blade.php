@@ -62,7 +62,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-white p-3">
-    © 2023 Copyright:
+    © 2023 Copyright: The Aulab Post Inc. Tutti i diritti riservati.
 
   </div>
   <!-- Copyright -->
