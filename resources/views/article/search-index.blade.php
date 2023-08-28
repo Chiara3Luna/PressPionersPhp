@@ -19,15 +19,15 @@
                     <p class="card-text">{{$article->subtitile}}</p>
                     <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small no-line text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
                 </div>
+                <span class="text-muted small fst-italic">Tempo di lettura: {{$article->readDuration()}} min</span>
                 <div class="card-footer text-muted d-flex justify-content-between align-items-center">
-                    <a class="no-line" href="{{route('article.search',['user'=> $article->user->id])}}">Redatto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</a>
+                    <a class="no-line" href="{{route('article.search',['user'=> $article->user->id])}}"> {{$article->created_at->format('d/m/Y')}}</a>
+                    <a href="" class="no-line">Di: {{$article->user->name}} </a>
                     <a href="{{route('article.show', compact('article'))}}" class="btn custom-1">Leggi</a>
                 </div>
-                <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
             </div>
         </div>
         @if ($article->category)
-        <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="small text-muted fst-italic text-capitalize">{{$article->category->name}}</a>
         @else
         <p class="small text-muted fst-italic text-capitalize">
             Non categorizzato

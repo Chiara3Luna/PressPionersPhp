@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="subtitle" class="form-label">Sottotitolo</label>
+                        <label for="subtitle" class="form-label">Sottotitolo:</label>
                         <input type="text" name="subtitle" class="form-control" id="subtitle"
                             value="{{ old('subtitle') }}">
                     </div>
