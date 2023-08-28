@@ -21,7 +21,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                        <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo">
+                        <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo" class="col-md-12 rounded-2">
                         {{-- <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio"> --}}
                             <hr>
                             <h3 class="card-title">{{ $article->title }}</h3>
