@@ -76,7 +76,6 @@
             <div class="col">
                 <div>
                     <img src="{{Storage::url($article->image)}}" alt="" class="img-fluid my-3 rounded-4">
-                    {{-- <img src="https://picsum.photos/480/580" alt="Immagine" class="rounded-4 mt-5"> --}}
                 </div>
             </div>
         </div>

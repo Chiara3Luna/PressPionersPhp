@@ -11,7 +11,6 @@
                         <div class="col-3 zoom">
 
                         </div>
-
                     @else
                         <p class="small text-muted fst-italic text-capitalize">
                             Non categorizzato
@@ -20,14 +19,14 @@
 
                     <div class="card">
                         <div class="card-body">
-                        <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo" class="img-fluid">
-                        {{-- <img src="https://picsum.photos/250/170?random={{$article->id}}" alt="Immagine di repertorio"> --}}
+                            <img src="{{ Storage::url($article->image) }}" alt="Immagine dell'articolo" class="img-fluid">
                             <hr>
                             <h3 class="card-title">{{ $article->title }}</h3>
                             <hr>
                             <h5 class="card-title">{{ $article->created_at->format('d/m/Y') }}</h5>
                             <p class="card-text">{{ $article->subtitle }}</p>
-                            <span class="text-muted small fst-italic">- tempo di lettura {{$article->readDuration()}} min</span>
+                            <span class="text-muted small fst-italic">- tempo di lettura {{ $article->readDuration() }}
+                                min</span>
                             <div class="d-flex justify-content-between">
                                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}"
                                     class="d-flex align-items-center mt-2 no-line">(Categoria:
@@ -44,17 +43,16 @@
                     </div>
                 </div>
 
-                @empty
-                    @if (Auth::check() && Auth::user()->is_writer)
-                        <h5 class="text-center pt-5">Non ci sono ancora articoli, <a href="{{ route('article.create') }}"
-                                class="btn custom-1">Inseriscine uno</a></h5>
-                    @endif
+            @empty
+                @if (Auth::check() && Auth::user()->is_writer)
+                    <h5 class="text-center pt-5">Non ci sono ancora articoli, <a href="{{ route('article.create') }}"
+                            class="btn custom-1">Inseriscine uno</a></h5>
+                @endif
+            @endforelse
 
-                @endforelse
-                
 
         </div>
 
     </div>
-    
+
 </x-layout>
