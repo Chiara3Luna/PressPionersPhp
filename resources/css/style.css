@@ -68,7 +68,6 @@ h3, h4, h5, h6, p{
 /* per le card (e il button delle card) */
 .zoom{
     transition: transform .2s;
-    width: 23%;
 }
 
 .zoom:hover{
@@ -134,4 +133,14 @@ h3, h4, h5, h6, p{
 
 .slot{
     min-height: 73.5vh;
+}
+
+
+
+
+
+#navSearch{
+    opacity: 0;
+    transition: 1s;
+    width: 0px;
 }
